@@ -2,7 +2,7 @@
 
 i started using aws control tower.
 
-curious about its features, that i believe is inspired by their infamous well architected framework.
+curious about its features, inspired by their infamous well architected framework.
 
 it comes with pre-defined core accounts to form a secure cloud platform, ready to be used by software makers.
 
@@ -18,7 +18,9 @@ i can switch to different aws profiles too.
 
 noice.
 
-native aws cli commands is all covered.
+native aws cli commands works perfectly. 
+
+good workflow.
 
 things got sticky when i wanted to run terraform.
 
@@ -34,9 +36,13 @@ Error: No valid credential sources found for AWS Provider.
  providing credentials for the AWS Provider
 ```
 
-my shell environment was not configured with the credentials. it doesn't work seamlessly. like zippers. seamless.
+my shell environment was not configured with the credentials. 
 
-the official way to do this is to get the credentials using their aws sso web console.
+it doesn't work seamlessly.
+
+like zippers.
+
+the "official" way to do this is to get the credentials using their aws sso web console.
 
 ![screenshot of aws sso web console](images/screenshot-aws-sso-web-console-api-credentials.png)
 
@@ -46,9 +52,11 @@ painful.
 
 i want to keep my operating environment in shell.
 
-my search brought me to this nifty project, https://github.com/linaro-its/aws2-wrap.
+i found this aws2-wrap project, https://github.com/linaro-its/aws2-wrap.
 
-this useful software sets up my shell environment with aws sso credentials.
+it sets up my shell environment with the aws sso credentials.
+
+i can run terraform.
 
 noice noice.
 
@@ -77,5 +85,27 @@ aws-sso-env-abc123
 ```
 
 this will export the credentials as environment variables.
+
+let's try running `terraform plan` again.
+
+``` shell
+$ terraform plan
+
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+...
+...
+...
+...
+...
+
+No changes. Infrastructure is up-to-date.
+
+This means that Terraform did not detect any differences between your
+configuration and real physical resources that exist. As a result, no
+actions need to be performed.
+```
 
 much better workflow.
