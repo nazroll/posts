@@ -2,7 +2,7 @@
 
 github has a decent web interface to edit markdown files.
 
-support for large media files?
+github has Git LFS, https://help.github.com/en/github/managing-large-files/about-git-large-file-storage.
 
 using pull requests as a collaborative review system in a hypothetical editorial workflow.
 
