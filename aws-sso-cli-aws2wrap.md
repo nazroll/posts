@@ -1,4 +1,4 @@
-# run terraform commands using aws sso with aws cli version 2
+# run terraform using aws sso credentials with aws cli version 2 and aws2-wrap
 
 i started using aws control tower.
 
