@@ -6,7 +6,11 @@ curious about its features, that i believe is inspired by their infamous well ar
 
 it comes with pre-defined core accounts to form a secure cloud platform, ready to be used by software makers.
 
-then, i was introduced to aws cli version 2 and this command, `aws sso login --profile=abc`.
+then, i was introduced to aws cli version 2 and this command, 
+
+``` shell
+aws sso login --profile=abc
+```
 
 this command allows me to login to my aws account and do stuff from my shell.
 
