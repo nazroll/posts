@@ -8,4 +8,8 @@ using pull requests as a collaborative review system in a hypothetical editorial
 
 ![screenshot of github pull request web interface](images/screenshot-github-pull-request-editorial-workflow.png)
 
-use github actions to publish generate html pages and push it to a cloud object storage service that supports hosting a static website.
+use github actions to generate html pages and push it to a cloud object storage service.
+
+use a cloud object storage service that supports hosting a static website.
+
+use github desktop app to create a new branch when i have a new post idea.
