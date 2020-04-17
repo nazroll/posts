@@ -2,19 +2,23 @@
 
 since i was a child, i developed and still developing, a strong belief that pain is the best teacher in order to be a better person in life. 
 
-as i grew wiser, i learned the way i tried to share my beliefs with other people, was not a pleasant educational experience.
+as i grew wiser, i learned that the way i tried to share my beliefs with other people, was not pleasant.
 
-i am misunderstood.
+i was, and still am, misunderstood.
 
 i share my personal and painful experiences because i see it as a positive story.
 
-most people do not get it. 
+i learned so much out it because i got out of it.
 
-some described me as a negative person and negative influence. 
+most people do not get that. 
 
-some say that i am a mentally not healthy.
+some described me as a negative person and a negative influence. 
+
+some say that i am a mentally not stable.
 
 i continued to seclude myself further and further away from society.
+
+i became very selective on who i hangout with.
 
 then one day, i stumbled upon a video by ray dalio. 
 
