@@ -2,6 +2,9 @@ stages:
     - validate
 
 validate_markdown: 
+    image: 06kellyjac/markdownlint-cli:latest
     stage: validate
+    before_script:
+        - markdownlint --version
     script:
-        - echo "Validating markdown files..."
+        - markdownlint .
