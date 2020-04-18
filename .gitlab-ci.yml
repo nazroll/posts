@@ -1,10 +1,13 @@
 stages:
     - validate
 
-validate_markdown: 
-    image: 06kellyjac/markdownlint-cli:latest
+markdownlint: 
     stage: validate
+    image: 
+        name: ruby:apline
+        entrypoint: [""]
     before_script:
-        - markdownlint --version
+        - gem install mdl
+        - mdl --version
     script:
-        - markdownlint .
+        - mdl --style all --warnings .
