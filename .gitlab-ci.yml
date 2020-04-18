@@ -4,7 +4,7 @@ stages:
 markdownlint: 
     stage: validate
     image: 
-        name: ruby:apline
+        name: ruby:alpine
         entrypoint: [""]
     before_script:
         - gem install mdl
