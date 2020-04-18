@@ -1,0 +1,7 @@
+stages:
+    - validate
+
+validate_markdown: 
+    stage: validate
+    script:
+        - echo "Validating markdown files..."
