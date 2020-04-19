@@ -1,6 +1,8 @@
-# posts
+# Posts
 
-this repository contains ridiculous written content by nazroll. don't believe the hype.
+This repository contains ridiculous written content by nazroll. 
+
+Don't believe the hype.
 
 - [Run Terraform using AWS SSO credentials with AWS CLI version 2 and aws2-wrap](https://github.com/nazroll/posts/blob/master/aws-sso-cli-aws2wrap.md)
 - [Pain as a teacher](https://github.com/nazroll/posts/blob/master/pain-as-a-teacher.md)
@@ -9,6 +11,6 @@ this repository contains ridiculous written content by nazroll. don't believe th
 - [How to Order Like a Malaysian](https://github.com/nazroll/posts/blob/master/how-to-order-like-malaysian.md)
 - [Naz Travels to New Zealand: Hyperlapse and Timelapse](https://github.com/nazroll/posts/blob/master/naz-travels-new-zealand-hyperlaps-timelapse.md)
 
-## work in progress
+## Work in progress
 
 - [Web publishing workflow using git and Github](https://github.com/nazroll/posts/blob/web-publishing-using-git-github/web-publishing-using-git-github.md)
