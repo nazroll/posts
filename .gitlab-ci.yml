@@ -6,7 +6,7 @@ stages:
 markdown:
     only:
         - master
-        - merge_requests
+        - external_pull_requests
     stage: validate
     image: 
         name: ruby:alpine
@@ -20,8 +20,7 @@ markdown:
 
 generate_pages:
     only:
-        - master
-        - merge_requests
+        - external_pull_requests
     stage: generate
     image:
         name: monachus/hugo
@@ -30,7 +29,7 @@ generate_pages:
     
 deploy_staging:
     only:
-        - merge_requests
+        - external_pull_requests
     stage: deploy
     image:
         name: go:alpine
