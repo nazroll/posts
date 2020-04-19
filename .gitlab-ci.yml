@@ -19,10 +19,8 @@ markdown:
     allow_failure: true
 
 generate_pages:
-    only:
-        - external_pull_requests
-    except: 
-        - branches
+    rules:
+        - if: $CI_EXTERNAL_PULL_REQUEST_IID
     stage: generate
     image:
         name: monachus/hugo
@@ -32,10 +30,8 @@ generate_pages:
         - echo "Generate pages..."
     
 deploy_staging:
-    only:
-        - external_pull_requests
-    except: 
-        - branches
+    rules:
+        - if: $CI_EXTERNAL_PULL_REQUEST_IID
     stage: deploy
     image:
         name: golang:alpine
