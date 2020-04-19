@@ -1,28 +1,28 @@
-# run terraform using aws sso credentials with aws cli version 2 and aws2-wrap
+# Run Terraform using AWS SSO credentials with AWS CLI version 2 and aws2-wrap
 
-i started using aws control tower.
+I started using AWS Control Tower.
 
-curious about its features, inspired by their infamous well architected framework.
+Curious about its features, inspired by their infamous Well Architected framework.
 
-it comes with pre-defined core accounts to form a secure cloud platform, ready to be used by software makers.
+It comes with pre-defined core accounts to form a secure cloud platform, ready to be used by software makers.
 
-then, i was introduced to aws cli version 2 and this command, 
+Then, i was introduced to AWS CLI version 2 and this command, 
 
 ``` shell
 aws sso login --profile=abc
 ```
 
-this command allows me to login to my aws account and do stuff from my shell.
+This command allows me to login to my AWS account and do stuff from my shell.
 
-i can switch to different aws profiles too.
+I can switch to different aws profiles too without an additional tool.
 
-noice.
+Noice.
 
-native aws cli commands works perfectly. 
+Native AWS cli commands works perfectly. 
 
-good workflow.
+Good workflow.
 
-things got sticky when i wanted to run terraform.
+Things got sticky when  wanted to run Terraform.
 
 ``` shell
 $ terraform plan
@@ -36,31 +36,31 @@ Error: No valid credential sources found for AWS Provider.
  providing credentials for the AWS Provider
 ```
 
-my shell environment was not configured with the credentials. 
+My shell environment was not configured with the credentials from AWS SSO. 
 
-it doesn't work seamlessly.
+It didn't work seamlessly.
 
-like zippers.
+Like zippers.
 
-the "official" way to do this is to get the credentials using their aws sso web console.
+The "official" way to do this is to get the credentials using their AWS SSO web console.
 
 ![screenshot of aws sso web console](images/screenshot-aws-sso-web-console-api-credentials.png)
 
-when my token expires, i go back to the web console and get new credentials.
+When my token expires, I go back to the web console and get new credentials.
 
-painful.
+Painful.
 
-i want to keep my operating environment in shell.
+I want to keep my operating environment in shell.
 
-i found this aws2-wrap project, https://github.com/linaro-its/aws2-wrap.
+I found this aws2-wrap project, https://github.com/linaro-its/aws2-wrap.
 
-it sets up my shell environment with the aws sso credentials.
+It sets up my shell environment with the AWS SSO credentials.
 
-i can run terraform.
+I can run terraform.
 
-noice noice.
+Noice noice.
 
-i fixed up alias shortcuts for my shell.
+I fixed up alias shortcuts for my shell.
 
 ``` shell
 alias aws-sso-login-abc123="aws sso login --profile=abc123"
@@ -68,25 +68,25 @@ alias aws-sso-login-abc123="aws sso login --profile=abc123"
 alias aws-sso-env-abc123="eval \"$(aws2-wrap --profile abc123 --export)\""
 ```
 
-noice noice noice.
+Noice noice noice.
 
-when i want to work with aws account abc123, i run,
+When i want to work with AWS account abc123, i run,
 
 ``` shell
 aws-sso-login-abc123
 ```
 
-it will open a web browser and prompts me to sign in to my aws account.
+It will open a web browser and prompts me to sign in to my AWS account.
 
-after i signed in, i run,
+After i signed in, i run,
 
 ``` shell
 aws-sso-env-abc123
 ```
 
-this will export the credentials as environment variables.
+This will export the credentials as environment variables.
 
-let's try running `terraform plan` again.
+Let's try running `terraform plan` again.
 
 ``` shell
 $ terraform plan
@@ -108,4 +108,4 @@ configuration and real physical resources that exist. As a result, no
 actions need to be performed.
 ```
 
-much better workflow.
+Much better workflow.
