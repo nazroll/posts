@@ -14,7 +14,7 @@ markdown:
         - mdl .
     allow_failure: true
 
-pages:
+generate_pages:
     stage: generate
     image:
         name: monachus/hugo
