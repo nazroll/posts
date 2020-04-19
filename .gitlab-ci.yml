@@ -4,7 +4,7 @@ stages:
     - deploy
 
 markdown:
-    except:
+    only:
         - branches
     stage: validate
     image: 
@@ -19,22 +19,26 @@ markdown:
 
 generate_pages:
     only:
-        - external_pull_request
+        - external_pull_requests
     except: 
         - branches
     stage: generate
     image:
         name: monachus/hugo
+    before_script:
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - echo "Generate pages..."
     
 deploy_staging:
     only:
-        - external_pull_request
+        - external_pull_requests
     except: 
         - branches
     stage: deploy
     image:
         name: golang:alpine
+    before_script:
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - echo "Deploying to staging..."
