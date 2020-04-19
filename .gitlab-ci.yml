@@ -13,6 +13,7 @@ markdown:
     before_script:
         - gem install mdl
         - mdl --version
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - mdl .
     allow_failure: true
