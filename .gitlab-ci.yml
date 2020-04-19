@@ -4,8 +4,8 @@ stages:
     - deploy
 
 markdown:
-    only:
-        - branches
+    rules:
+        - if: '$CI_EXTERNAL_PULL_REQUEST_IID == null'
     stage: validate
     image: 
         name: ruby:alpine
