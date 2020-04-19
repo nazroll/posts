@@ -6,4 +6,10 @@ to have my face as one of the photo features in [their article](https://www.be-m
 
 the article is about how the community, young and old, will persevere and maintain the spirit of rollerblading.
 
+my appreciation goes out to [jonathan labez](https://instagram.com/jmlabez), the photo editor of be-mag.com, for these amazing photos. 
+
+my wife said i look handsome in these photos. 
+
 very apt indeed.
+
+thank you.
