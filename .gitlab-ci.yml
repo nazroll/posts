@@ -5,7 +5,7 @@ stages:
 
 markdown:
     rules:
-        - if: '$CI_COMMIT_BRANCH != "master"'
+        - if: '$CI_COMMIT_BRANCH == "master"'
         - if: '$CI_EXTERNAL_PULL_REQUEST_IID == null'
     stage: validate
     image: 
