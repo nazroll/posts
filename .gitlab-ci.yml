@@ -1,6 +1,7 @@
 stages:
     - validate
     - generate
+    - deploy
 
 markdown:
     only:
@@ -27,3 +28,11 @@ generate_pages:
     script:
         - echo "Generate pages..."
     
+deploy_staging:
+    only:
+        - merge_requests
+    stage: deploy
+    image:
+        name: go:alpine
+    script:
+        - echo "Deploying to staging..."
