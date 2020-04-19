@@ -1,7 +1,8 @@
 stages:
     - validate
+    - generate
 
-markdownlint: 
+markdown:
     stage: validate
     image: 
         name: ruby:alpine
@@ -11,3 +12,12 @@ markdownlint:
         - mdl --version
     script:
         - mdl .
+    allow_failure: true
+
+pages:
+    stage: generate
+    image:
+        name: monachus/hugo
+    script:
+        - echo "Generate pages..."
+    
