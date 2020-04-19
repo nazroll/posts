@@ -4,8 +4,6 @@ stages:
     - deploy
 
 markdown:
-    only:
-        - branches
     rules:
         - if: $CI_EXTERNAL_PULL_REQUEST_IID != null
         - if: $CI_EXTERNAL_PULL_REQUEST_IID == ''
