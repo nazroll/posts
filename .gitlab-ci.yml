@@ -3,6 +3,9 @@ stages:
     - generate
 
 markdown:
+    only:
+        - master
+        - merge_requests
     stage: validate
     image: 
         name: ruby:alpine
@@ -15,6 +18,9 @@ markdown:
     allow_failure: true
 
 generate_pages:
+    only:
+        - master
+        - merge_requests
     stage: generate
     image:
         name: monachus/hugo
