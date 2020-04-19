@@ -11,7 +11,7 @@ markdown:
         - gem install mdl
         - mdl --version
     script:
-        - mdl --style all --warnings .
+        - mdl .
     allow_failure: true
 
 pages:
