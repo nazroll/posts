@@ -4,6 +4,7 @@ this repository contains ridiculous written content by nazroll. don't believe th
 
 - [run terraform using aws sso credentials with aws cli version 2 and aws2-wrap](https://github.com/nazroll/posts/blob/master/aws-sso-cli-aws2wrap.md)
 - [pain as a teacher](https://github.com/nazroll/posts/blob/master/pain-as-a-teacher.md)
+- [oh shit! look mom, my face is in be-mag.com](https://github.com/nazroll/posts/blob/master/oh-shit-mom-my-face-is-in-be-mag.md)
 
 ## work in progress
 
