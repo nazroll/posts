@@ -15,6 +15,7 @@ markdown:
         - gem install mdl
         - mdl --version
         - echo $CI_EXTERNAL_PULL_REQUEST_IID
+        - echo $CI_COMMIT_BRANCH
     script:
         - mdl .
     allow_failure: true
