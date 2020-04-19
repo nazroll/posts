@@ -4,8 +4,8 @@ stages:
     - deploy
 
 markdown:
-    except:
-        - branches
+    rules:
+        - if: '$CI_EXTERNAL_PULL_REQUEST_IID == null'
     stage: validate
     image: 
         name: ruby:alpine
@@ -13,28 +13,29 @@ markdown:
     before_script:
         - gem install mdl
         - mdl --version
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - mdl .
     allow_failure: true
 
 generate_pages:
-    only:
-        - external_pull_request
-    except: 
-        - branches
+    rules:
+        - if: $CI_EXTERNAL_PULL_REQUEST_IID
     stage: generate
     image:
         name: monachus/hugo
+    before_script:
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - echo "Generate pages..."
     
 deploy_staging:
-    only:
-        - external_pull_request
-    except: 
-        - branches
+    rules:
+        - if: $CI_EXTERNAL_PULL_REQUEST_IID
     stage: deploy
     image:
         name: golang:alpine
+    before_script:
+        - echo $CI_EXTERNAL_PULL_REQUEST_IID
     script:
         - echo "Deploying to staging..."
