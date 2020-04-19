@@ -4,9 +4,8 @@ stages:
     - deploy
 
 markdown:
-    only:
-        - master
-        - merge_requests
+    except:
+        - branches
     stage: validate
     image: 
         name: ruby:alpine
@@ -20,8 +19,9 @@ markdown:
 
 generate_pages:
     only:
-        - master
-        - merge_requests
+        - external_pull_request
+    except: 
+        - branches
     stage: generate
     image:
         name: monachus/hugo
@@ -30,9 +30,11 @@ generate_pages:
     
 deploy_staging:
     only:
-        - merge_requests
+        - external_pull_request
+    except: 
+        - branches
     stage: deploy
     image:
-        name: go:alpine
+        name: golang:alpine
     script:
         - echo "Deploying to staging..."
