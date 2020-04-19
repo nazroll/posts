@@ -6,7 +6,6 @@ stages:
 markdown:
     rules:
         - if: '$CI_EXTERNAL_PULL_REQUEST_IID == null && $CI_COMMIT_BRANCH != "master"'
-        - if: '$CI_EXTERNAL_PULL_REQUEST_IID == null && $CI_EXTERNAL_PULL_REQUEST_TARGET_BRANCH_NAME == null'
     stage: validate
     image: 
         name: ruby:alpine
