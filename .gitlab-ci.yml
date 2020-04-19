@@ -4,6 +4,8 @@ stages:
     - deploy
 
 markdown:
+    except:
+        - branches
     stage: validate
     image: 
         name: ruby:alpine
@@ -17,7 +19,7 @@ markdown:
 
 generate_pages:
     only:
-        - external_pull_requests
+        - external_pull_request
     except: 
         - branches
     stage: generate
@@ -28,7 +30,7 @@ generate_pages:
     
 deploy_staging:
     only:
-        - external_pull_requests
+        - external_pull_request
     except: 
         - branches
     stage: deploy
